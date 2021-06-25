@@ -48,19 +48,20 @@ namespace Kalkulator
                 MessageBox.Show("Больше 500 тысяч в займы не даём");
             }
             day = Convert.ToInt32(textBox2.Text);
+
             if (day > 0 && day < 6)
             {
-                comboBox1.Text = "До 5-ти дней 0.9%";
+                comboBox1.Text = "0.9%";
             }
 
             else if (day > 5 && day < 11)
             {
-                comboBox1.Text = "С 6 по 10 день 0.7%";
+                comboBox1.Text = "0.7%";
             }
 
             else if (day > 10 && day < 366)
             {
-                comboBox1.Text = "После 11 дня 0.6%";
+                comboBox1.Text = "0.6%";
             }
             else
             {
@@ -68,7 +69,7 @@ namespace Kalkulator
             }
             switch (comboBox1.Text)
             {
-                case "До 5-ти дней 0.9%":
+                case "0.9%":
 
                     if (day > 0 && day < 6)
                     {
@@ -77,7 +78,7 @@ namespace Kalkulator
                     }
                     MessageBox.Show("Дни с 1 по 5");
                     break;
-                case "С 6 по 10 день 0.7%":
+                case "0.7%":
                     if (day > 5 && day < 11)
                     {
                         result.Text = Convert.ToString(((a / 100) * 0.9 * 5) + ((a / 100) * 0.7 * (day - 5) + a));
@@ -85,16 +86,16 @@ namespace Kalkulator
                     }
                     MessageBox.Show("Дни с 6 по 10");
                     break;
-                case "После 11 дня 0.6%":
+                case "0.6%":
                     if (day > 10 && day < 366)
                     {
-                        double d = ((a / 100) * 0.9 * 5) + ((a / 100) * 0.7 * 5) + ((a / 100) * 0.6 * (day - 10) + a);
+                        double b = ((a / 100) * 0.9 * 5) + ((a / 100) * 0.7 * 5) + ((a / 100) * 0.6 * (day - 10) + a);
 
-                        if ((a * 2.5) < d)
+                        if ((a * 2.5) < b)
                         {
-                            d = a * 2.5;
+                            b = a * 2.5;
                         }
-                        result.Text = Convert.ToString(d);
+                        result.Text = Convert.ToString(b);
                         break;
                     }
                     MessageBox.Show("Дни с 11 по год");
