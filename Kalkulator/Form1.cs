@@ -19,7 +19,7 @@ namespace Kalkulator
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void boxlabel1_Click(object sender, EventArgs e)
         {
 
         }
@@ -29,7 +29,7 @@ namespace Kalkulator
 
         }
 
-        private void label2_Click(object sender, EventArgs e)
+        private void boxlabel2_Click(object sender, EventArgs e)
         {
 
         }
@@ -42,13 +42,13 @@ namespace Kalkulator
         private void buttonschot_Click(object sender, EventArgs e)
         {
             double a;
-            a = Convert.ToDouble(label1.Text);
+            a = Convert.ToDouble(textBox1.Text);
             if (a >= 500000)
             {
-                MessageBox.Show("Более 500тысяч не даём!");
+                MessageBox.Show("Больше 500 тысяч в займы не даём");
                 Application.Restart();
             }
-            day = Convert.ToInt32(label2.Text);
+            day = Convert.ToInt32(textBox2.Text);
             if (day > 0 && day < 6)
             {
                 comboBox1.Text = "До 5-ти дней 0.9%";
@@ -112,7 +112,7 @@ namespace Kalkulator
             result.Text = "";
             comboBox1.Text = "";
         }
-        private void label3_Click(object sender, EventArgs e)
+        private void boxlabel3_Click(object sender, EventArgs e)
         {
 
         }

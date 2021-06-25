@@ -43,12 +43,12 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(63, 28);
+            this.label1.Location = new System.Drawing.Point(45, 28);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(34, 13);
+            this.label1.Size = new System.Drawing.Size(76, 13);
             this.label1.TabIndex = 0;
-            this.label1.Text = "День";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.label1.Text = "Сумма займа";
+            this.label1.Click += new System.EventHandler(this.boxlabel1_Click);
             // 
             // textBox1
             // 
@@ -61,12 +61,12 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(189, 28);
+            this.label2.Location = new System.Drawing.Point(209, 28);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(76, 13);
+            this.label2.Size = new System.Drawing.Size(34, 13);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Сумма займа";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            this.label2.Text = "День";
+            this.label2.Click += new System.EventHandler(this.boxlabel2_Click);
             // 
             // textBox2
             // 
@@ -115,7 +115,7 @@
             this.label3.Size = new System.Drawing.Size(58, 13);
             this.label3.TabIndex = 7;
             this.label3.Text = "Проценты";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
+            this.label3.Click += new System.EventHandler(this.boxlabel3_Click);
             // 
             // result
             // 
