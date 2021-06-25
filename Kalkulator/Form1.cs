@@ -46,7 +46,6 @@ namespace Kalkulator
             if (a >= 500000)
             {
                 MessageBox.Show("Больше 500 тысяч в займы не даём");
-                Application.Restart();
             }
             day = Convert.ToInt32(textBox2.Text);
             if (day > 0 && day < 6)
@@ -76,8 +75,7 @@ namespace Kalkulator
                         result.Text = Convert.ToString((a / 100) * 0.9 * day + a);
                         break;
                     }
-                    MessageBox.Show("Принимает дни от 1 до 5!");
-                    Application.Restart();
+                    MessageBox.Show("Дни с 1 по 5");
                     break;
                 case "С 6 по 10 день 0.7%":
                     if (day > 5 && day < 11)
@@ -85,8 +83,7 @@ namespace Kalkulator
                         result.Text = Convert.ToString(((a / 100) * 0.9 * 5) + ((a / 100) * 0.7 * (day - 5) + a));
                         break;
                     }
-                    MessageBox.Show("Принимает дни от 6 до 10!");
-                    Application.Restart();
+                    MessageBox.Show("Дни с 6 по 10");
                     break;
                 case "После 11 дня 0.6%":
                     if (day > 10 && day < 366)
@@ -100,15 +97,14 @@ namespace Kalkulator
                         result.Text = Convert.ToString(d);
                         break;
                     }
-                    MessageBox.Show("Принимает дни от 11 до года!");
-                    Application.Restart();
+                    MessageBox.Show("Дни с 11 по год");
                     break;
             }
         }
         private void buttonclear_Click(object sender, EventArgs e)
         {
-            label1.Text = "";
-            label2.Text = "";
+            textBox1.Text = "";
+            textBox2.Text = "";
             result.Text = "";
             comboBox1.Text = "";
         }
@@ -123,6 +119,11 @@ namespace Kalkulator
         }
 
         private void result_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
